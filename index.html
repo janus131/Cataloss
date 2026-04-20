@@ -4,92 +4,61 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>카타로스 | KATHAROS</title>
+<link rel="stylesheet" href="style.css">
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif; background: #f5f5f5; color: #111; }
-
-  /* 상단 헤더 */
-  .top-bar { background: #c6141e; color: #fff; font-size: 12px; padding: 6px 20px; display: flex; justify-content: space-between; }
-  .header { background: #fff; border-bottom: 3px solid #c6141e; padding: 20px; text-align: center; }
-  .header .logo { font-size: 48px; font-weight: 900; letter-spacing: 8px; color: #111; font-family: Georgia, serif; }
-  .header .logo span { color: #c6141e; }
-  .header .tagline { font-size: 13px; color: #666; margin-top: 4px; letter-spacing: 2px; }
-  .header-date { font-size: 12px; color: #999; margin-top: 8px; }
-
-  /* 네비게이션 */
-  nav { background: #111; }
-  nav ul { display: flex; list-style: none; max-width: 1200px; margin: 0 auto; }
-  nav ul li a { display: block; color: #fff; text-decoration: none; padding: 12px 20px; font-size: 14px; font-weight: bold; }
-  nav ul li a:hover { background: #c6141e; }
-
-  /* 메인 컨테이너 */
-  .container { max-width: 1200px; margin: 24px auto; padding: 0 16px; display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
-
-  /* 메인 기사 */
   .main-article { background: #fff; border: 1px solid #ddd; overflow: hidden; }
-  .main-article img { width: 100%; height: 360px; object-fit: cover; }
-  .main-article .content { padding: 24px; }
-  .main-article .category { color: #c6141e; font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+  .main-article .content { padding: 28px; }
+  .main-article .category { color: #c6141e; font-size: 12px; font-weight: bold; letter-spacing: 1px; }
   .main-article h1 { font-size: 28px; line-height: 1.4; margin: 10px 0; font-weight: 900; }
+  .main-article h1 a { color: #111; text-decoration: none; }
+  .main-article h1 a:hover { color: #c6141e; }
   .main-article .summary { color: #555; font-size: 15px; line-height: 1.8; }
   .main-article .meta { color: #999; font-size: 12px; margin-top: 16px; border-top: 1px solid #eee; padding-top: 12px; }
-
-  /* 사이드바 기사 목록 */
-  .sidebar {}
-  .sidebar-title { font-size: 14px; font-weight: 900; border-bottom: 2px solid #c6141e; padding-bottom: 8px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
-  .article-card { background: #fff; border: 1px solid #ddd; margin-bottom: 16px; overflow: hidden; display: flex; }
-  .article-card img { width: 90px; height: 80px; object-fit: cover; flex-shrink: 0; }
-  .article-card .info { padding: 10px 12px; }
+  .article-card { background: #fff; border: 1px solid #ddd; margin-bottom: 14px; overflow: hidden; }
+  .article-card .info { padding: 14px 16px; }
   .article-card .category { color: #c6141e; font-size: 11px; font-weight: bold; }
-  .article-card h3 { font-size: 13px; line-height: 1.5; margin-top: 4px; }
+  .article-card h3 { font-size: 14px; line-height: 1.5; margin-top: 5px; }
+  .article-card h3 a { color: #222; text-decoration: none; }
+  .article-card h3 a:hover { color: #c6141e; }
   .article-card .date { font-size: 11px; color: #999; margin-top: 6px; }
-
-  /* 하단 기사 그리드 */
+  .sidebar-title { font-size: 13px; font-weight: 900; border-bottom: 2px solid #c6141e; padding-bottom: 8px; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 1px; }
+  .publisher-box { background: #111; color: #fff; padding: 20px; margin-bottom: 20px; }
+  .publisher-box .name { font-size: 17px; font-weight: bold; }
+  .publisher-box .title { color: #c6141e; font-size: 12px; margin-top: 4px; }
+  .publisher-box .bio { font-size: 12px; color: #ccc; line-height: 1.8; padding-top: 12px; border-top: 1px solid #333; margin-top: 12px; }
   .bottom-grid { max-width: 1200px; margin: 0 auto 40px; padding: 0 16px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
   .grid-card { background: #fff; border: 1px solid #ddd; overflow: hidden; }
-  .grid-card img { width: 100%; height: 180px; object-fit: cover; }
   .grid-card .content { padding: 16px; }
   .grid-card .category { color: #c6141e; font-size: 11px; font-weight: bold; }
   .grid-card h2 { font-size: 16px; font-weight: bold; line-height: 1.5; margin: 6px 0; }
+  .grid-card h2 a { color: #111; text-decoration: none; }
+  .grid-card h2 a:hover { color: #c6141e; }
   .grid-card .date { font-size: 11px; color: #999; }
-
-  /* 발행인 소개 */
-  .publisher-box { background: #111; color: #fff; padding: 20px; margin-bottom: 20px; }
-  .publisher-box img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid #c6141e; float: left; margin-right: 16px; }
-  .publisher-box .name { font-size: 16px; font-weight: bold; }
-  .publisher-box .title { color: #c6141e; font-size: 12px; margin-top: 4px; }
-  .publisher-box .bio { font-size: 12px; color: #ccc; margin-top: 8px; line-height: 1.6; clear: both; padding-top: 12px; border-top: 1px solid #333; margin-top: 12px; }
-
-  footer { background: #111; color: #999; text-align: center; padding: 20px; font-size: 12px; }
-  footer span { color: #c6141e; }
-
   @media(max-width: 768px) {
-    .container { grid-template-columns: 1fr; }
     .bottom-grid { grid-template-columns: 1fr; }
-    .header .logo { font-size: 32px; }
   }
 </style>
 </head>
 <body>
 
 <div class="top-bar">
-  <span>2026년 4월 20일 월요일</span>
+  <span id="today-date"></span>
   <span>정론직필 | 카타로스 인터넷신문</span>
 </div>
 
 <header class="header">
-  <div class="logo">KATH<span>A</span>ROS</div>
+  <a href="index.html" class="logo">KATH<span>A</span>ROS</a>
   <div class="tagline">카타로스 | 맑고 순수한 진실을 전합니다</div>
 </header>
 
 <nav>
   <ul>
-    <li><a href="politics.html">홈</a></li>
+    <li><a href="index.html" class="active">홈</a></li>
     <li><a href="politics.html">정치</a></li>
-    <li><a href="politics.html">지역</a></li>
-    <li><a href="politics.html">전문가칼럼</a></li>
-    <li><a href="politics.html">인터뷰</a></li>
-    <li><a href="politics.html">발행인</a></li>
+    <li><a href="local.html">지역</a></li>
+    <li><a href="column.html">전문가칼럼</a></li>
+    <li><a href="interview.html">인터뷰</a></li>
+    <li><a href="publisher.html">발행인</a></li>
   </ul>
 </nav>
 
@@ -98,27 +67,26 @@
   <div class="main-article">
     <div class="content">
       <div class="category">📌 대표 칼럼</div>
-      <h1>심리를 알면 사람이 보입니다 — 범죄심리사가 바라본 마포의 미래</h1>
+      <h1><a href="column.html">심리를 알면 사람이 보입니다 — 범죄심리사가 바라본 마포의 미래</a></h1>
       <p class="summary">
-        마포구 아현동과 도화동은 서울 한복판에 있지만, 여전히 많은 주민들이 안전과 재개발 문제로 불안을 느끼고 있습니다. 
-        범죄심리사이자 민주평화통일자문회의 청년분과위원장으로서, 저는 이 지역의 문제를 심리학적 시각으로 바라봅니다. 
-        갈등의 뿌리에는 언제나 소통의 부재가 있습니다...
+        마포구 아현동과 도화동은 서울 한복판에 있지만, 여전히 많은 주민들이 안전과 재개발 문제로 불안을 느끼고 있습니다.
+        범죄심리사이자 민주평화통일자문회의 청년분과위원장으로서, 저는 이 지역의 문제를 심리학적 시각으로 바라봅니다.
+        갈등의 뿌리에는 언제나 소통의 부재가 있습니다. 사람을 이해하는 것이 진정한 변화의 시작입니다.
       </p>
       <div class="meta">
-        <strong>김재록</strong> 발행인 | 2026.04.20 | 마포·정치
+        <strong>김재록</strong> 발행인 | 2026.04.20 | 전문가칼럼
       </div>
     </div>
   </div>
 
   <!-- 사이드바 -->
   <div class="sidebar">
-    <!-- 발행인 소개 -->
     <div class="publisher-box">
       <div class="name">김 재 록</div>
       <div class="title">카타로스 발행인 · 범죄심리사</div>
       <div class="bio">
-        용산경찰서 위촉 범죄심리사<br>
-        민주평통 마포구 청년분과위원장<br>
+        현 용산경찰서 위촉 범죄심리사<br>
+        현 민주평통 마포구 청년분과위원장<br>
         중앙대 범죄및법정심리학 석사<br>
         서강대 철학 석사 | 해병대 출신
       </div>
@@ -128,25 +96,33 @@
 
     <div class="article-card">
       <div class="info">
-        <div class="category">정치</div>
-        <h3>마포갑 공천 파동, 당협 시스템의 민낯</h3>
-        <div class="date">2026.04.20</div>
+        <div class="category">전문가칼럼</div>
+        <h3><a href="column.html">청소년 범죄와 지역 공동체의 역할</a></h3>
+        <div class="date">2026.04.15</div>
       </div>
     </div>
 
     <div class="article-card">
       <div class="info">
         <div class="category">지역</div>
-        <h3>아현동 재개발, 원주민은 돌아올 수 있는가</h3>
-        <div class="date">2026.04.18</div>
+        <h3><a href="local.html">아현동 재개발, 원주민은 돌아올 수 있는가</a></h3>
+        <div class="date">2026.04.12</div>
       </div>
     </div>
 
     <div class="article-card">
       <div class="info">
-        <div class="category">전문가칼럼</div>
-        <h3>청소년 범죄와 지역 공동체의 역할</h3>
-        <div class="date">2026.04.15</div>
+        <div class="category">정치</div>
+        <h3><a href="politics.html">청년 정치인의 시대, 기초의회부터 시작된다</a></h3>
+        <div class="date">2026.04.08</div>
+      </div>
+    </div>
+
+    <div class="article-card">
+      <div class="info">
+        <div class="category">인터뷰</div>
+        <h3><a href="interview.html">"범죄심리사가 왜 정치를?" — 김재록의 선택</a></h3>
+        <div class="date">2026.04.10</div>
       </div>
     </div>
   </div>
@@ -156,23 +132,23 @@
 <div class="bottom-grid">
   <div class="grid-card">
     <div class="content">
-      <div class="category">인터뷰</div>
-      <h2>"범죄심리사가 왜 정치를?" — 김재록의 선택</h2>
-      <div class="date">2026.04.10</div>
-    </div>
-  </div>
-  <div class="grid-card">
-    <div class="content">
-      <div class="category">통일·안보</div>
-      <h2>청년세대와 통일교육, 무엇이 달라져야 하는가</h2>
+      <div class="category">전문가칼럼</div>
+      <h2><a href="column.html">막스 슈티르너와 현대 정치의 자아</a></h2>
       <div class="date">2026.04.05</div>
     </div>
   </div>
   <div class="grid-card">
     <div class="content">
       <div class="category">지역</div>
-      <h2>도화동 골목상권, 살아나려면 무엇이 필요한가</h2>
-      <div class="date">2026.03.28</div>
+      <h2><a href="local.html">도화동 골목상권, 살아나려면 무엇이 필요한가</a></h2>
+      <div class="date">2026.04.08</div>
+    </div>
+  </div>
+  <div class="grid-card">
+    <div class="content">
+      <div class="category">인터뷰</div>
+      <h2><a href="interview.html">해병대에서 철학까지 — 김재록의 이력서</a></h2>
+      <div class="date">2026.04.01</div>
     </div>
   </div>
 </div>
@@ -182,5 +158,9 @@
   <p style="margin-top:8px;">본 신문은 인터넷신문 등록 절차에 따라 운영됩니다.</p>
 </footer>
 
+<script>
+  document.getElementById('today-date').textContent =
+    new Date().toLocaleDateString('ko-KR', {year:'numeric', month:'long', day:'numeric', weekday:'long'});
+</script>
 </body>
 </html>
