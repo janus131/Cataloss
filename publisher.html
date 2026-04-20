@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>발행인 | 카타로스</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.profile-box { background:#fff; border:1px solid #ddd; max-width:800px; margin: 24px auto; padding:40px; }
+.profile-header { display:flex; gap:32px; align-items:flex-start; border-bottom:2px solid #c6141e; padding-bottom:28px; margin-bottom:28px; }
+.profile-avatar { width:140px; height:140px; border-radius:50%; background:#111; flex-shrink:0; display:flex; align-items:center; justify-content:center; color:#c6141e; font-size:56px; font-weight:900; border:4px solid #c6141e; }
+.profile-name { font-size:36px; font-weight:900; }
+.profile-title { color:#c6141e; font-size:16px; margin:8px 0 16px; }
+.profile-quote { font-style:italic; color:#555; font-size:15px; line-height:1.8; border-left:3px solid #c6141e; padding-left:16px; }
+.section-title { font-size:16px; font-weight:900; border-bottom:1px solid #ddd; padding-bottom:8px; margin:24px 0 16px; text-transform:uppercase; letter-spacing:1px; color:#111; }
+.career-item { display:flex; gap:16px; margin-bottom:12px; font-size:14px; }
+.career-dot { color:#c6141e; font-weight:bold; flex-shrink:0; }
+</style>
+</head>
+<body>
+<div class="top-bar"><span id="today-date"></span><span>정론직필 | 카타로스 인터넷신문</span></div>
+<header class="header">
+  <a href="index.html" class="logo">KATH<span>A</span>ROS</a>
+  <div class="tagline">카타로스 | 맑고 순수한 진실을 전합니다</div>
+</header>
+<nav><ul>
+  <li><a href="index.html">홈</a></li>
+  <li><a href="politics.html">정치</a></li>
+  <li><a href="local.html">지역</a></li>
+  <li><a href="column.html">전문가칼럼</a></li>
+  <li><a href="interview.html">인터뷰</a></li>
+  <li><a href="publisher.html" class="active">발행인</a></li>
+</ul></nav>
+
+<div class="profile-box">
+  <div class="profile-header">
+    <div class="profile-avatar">金</div>
+    <div>
+      <div class="profile-name">김 재 록</div>
+      <div class="profile-title">카타로스 발행인 · 범죄심리사 · 철학자</div>
+      <div class="profile-quote">"심리를 알면 사람이 보입니다.<br>사람이 보이면 세상을 바꿀 수 있습니다."</div>
+    </div>
+  </div>
+
+  <div class="section-title">現 주요 직함</div>
+  <div class="career-item"><div class="career-dot">◆</div><div>용산경찰서 위촉 범죄심리사</div></div>
+  <div class="career-item"><div class="career-dot">◆</div><div>민주평화통일자문회의 마포구협의회 청년분과위원장</div></div>
+  <div class="career-item"><div class="career-dot">◆</div><div>서부경찰서 경찰선도프로그램 운영자</div></div>
+  <div class="career-item"><div class="career-dot">◆</div><div>아현동 자율방범대원</div></div>
+  <div class="career-item"><div class="career-dot">◆</div><div>쓰리디엠(주) 대표이사</div></div>
+
+  <div class="section-title">학력</div>
+  <div class="career-item"><div class="career-dot">▸</div><div>중앙대학교 심리서비스대학원 — 범죄및법정심리학 석사</div></div>
+  <div class="career-item"><div class="career-dot">▸</div><div>서강대학교 신학대학원 — 철학 석사</div></div>
+  <div class="career-item"><div class="career-dot">▸</div><div>부산대학교 심리학과 졸업</div></div>
+
+  <div class="section-title">병역 · 기타</div>
+  <div class="career-item"><div class="career-dot">▸</div><div>대한민국 해병대 병장 만기전역 (996기)</div></div>
+  <div class="career-item"><div class="career-dot">▸</div><div>멘사코리아 회원</div></div>
+
+  <div class="section-title">수상</div>
+  <div class="career-item"><div class="career-dot">▸</div><div>서울특별시자치경찰위원회 감사장 (2024)</div></div>
+  <div class="career-item"><div class="career-dot">▸</div><div>국회의원 표창 (2020)</div></div>
+
+  <div class="section-title">저서 · 논문</div>
+  <div class="career-item"><div class="career-dot">▸</div><div>《조각과 파편》 (2024)</div></div>
+  <div class="career-item"><div class="career-dot">▸</div><div>번역 《슈티르너의 비평가들》 (2024)</div></div>
+  <div class="career-item"><div class="career-dot">▸</div><div>논문 「막스 슈티르너의 유일자에 대한 연구」 (서강대, 2024)</div></div>
+  <div class="career-item"><div class="career-dot">▸</div><div>논문 「청소년의 우울 증상과 성적 위험행동 간 관계에서 자살사고의 매개효과」 (중앙대, 2026)</div></div>
+</div>
+
+<footer>
+  <p>© 2026 <span>KATHAROS</span> 카타로스 인터넷신문 | 발행인: 김재록 | 서울특별시 마포구</p>
+</footer>
+<script>document.getElementById('today-date').textContent = new Date().toLocaleDateString('ko-KR', {year:'numeric',month:'long',day:'numeric',weekday:'long'});</script>
+</body>
+</html>
