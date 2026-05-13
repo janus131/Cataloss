@@ -10,6 +10,23 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+<div class="top-bar"><span id="today-date"></span><span>정론직필 | 카타로스 인터넷신문</span></div>
+<header class="header">
+  <a href="../index.html" class="logo">KATH<span>A</span>ROS</a>
+  <div class="tagline">카타로스 | 맑고 순수한 진실을 전합니다</div>
+</header>
+<nav><ul>
+  <li><a href="../index.html">홈</a></li>
+  <li><a href="../politics.html">정치</a></li>
+  <li><a href="../local.html">지역</a></li>
+  <li><a href="../international.html">국제</a></li>
+  <li><a href="../column.html">전문가칼럼</a></li>
+  <li><a href="../interview.html">인터뷰</a></li>
+  <li><a href="../publisher.html">발행인</a></li>
+</ul></nav>
+<script>document.getElementById('today-date').textContent = new Date().toLocaleDateString('ko-KR', {year:'numeric',month:'long',day:'numeric',weekday:'long'});</script>
+
+
     <article class="news-article" data-id="international_02" data-date="2026-05-12" data-author="KATHAROS">
         <header>
             <p class="category">국제</p>
