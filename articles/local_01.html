@@ -6,14 +6,17 @@
 <title>아현동 재개발, 원주민은 돌아올 수 있는가 | 카타로스</title>
 <link rel="stylesheet" href="../style.css">
 <style>
-.article-body { max-width:800px; margin:0 auto; background:#fff; padding:40px; border:1px solid #ddd; }
-.article-title { font-size:30px; font-weight:900; line-height:1.4; margin:16px 0; }
-.article-meta { color:#999; font-size:13px; padding:12px 0; border-top:1px solid #eee; border-bottom:1px solid #eee; margin-bottom:28px; }
-.article-meta span { color:#c6141e; font-weight:bold; }
-.article-content p { font-size:15px; line-height:2; margin-bottom:18px; color:#333; }
-.article-content h3 { font-size:18px; font-weight:bold; margin:28px 0 12px; color:#111; border-left:3px solid #c6141e; padding-left:12px; }
-.back-link { display:inline-block; margin:24px 0; color:#c6141e; text-decoration:none; font-size:13px; }
-.back-link:hover { text-decoration:underline; }
+  .article-wrapper { max-width: 900px; margin: 0 auto; }
+  .article-main { max-width: 800px; margin: 0 auto; background: #fff; padding: 40px 20px; }
+  .article-header { margin-bottom: 32px; border-bottom: 2px solid #c6141e; padding-bottom: 20px; }
+  .article-category { color: #c6141e; font-size: 12px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; margin: 0 0 12px 0; }
+  .article-title { font-size: 28px; font-weight: 900; line-height: 1.5; margin: 12px 0; color: #111; }
+  .article-summary { color: #666; font-size: 15px; line-height: 1.8; margin: 12px 0; }
+  .article-meta { color: #999; font-size: 13px; padding-top: 12px; }
+  .article-content { color: #333; font-size: 15px; line-height: 1.9; }
+  .article-content p { margin-bottom: 18px; }
+  .back-link { display: inline-block; margin: 24px 0; color: #c6141e; text-decoration: none; font-size: 13px; }
+  .back-link:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -31,41 +34,41 @@
   <li><a href="../interview.html">인터뷰</a></li>
   <li><a href="../publisher.html">발행인</a></li>
 </ul></nav>
+<script>document.getElementById('today-date').textContent = new Date().toLocaleDateString('ko-KR', {year:'numeric',month:'long',day:'numeric',weekday:'long'});</script>
 
-<div style="max-width:800px;margin:24px auto 0;padding:0 16px;">
-  <a href="../local.html" class="back-link">← 지역으로 돌아가기</a>
-</div>
-
-<div style="max-width:800px;margin:8px auto 40px;padding:0 16px;">
-  <div class="article-body">
-    <div style="color:#c6141e;font-size:12px;font-weight:bold;letter-spacing:1px;">지역</div>
-    <h1 class="article-title">아현동 재개발, 원주민은 돌아올 수 있는가</h1>
-    <div class="article-meta">
-      ✍️ <span>김재록</span> &nbsp;|&nbsp; 📅 2026.04.12 &nbsp;|&nbsp; 카타로스 인터넷신문
-    </div>
-    <div class="article-content">
-      
-<p>마포구 아현동 일대 재개발 사업이 본격화되면서 세입자와 원주민 이주 문제가 수면 위로 떠올랐다. 수십 년간 이 지역에서 살아온 주민들이 개발 이익에서 소외된 채 떠나야 하는 현실이 반복되고 있다.</p>
-<h3>재개발의 두 얼굴</h3>
-<p>재개발은 노후 주거환경을 개선하고 지역 가치를 높이는 긍정적 측면이 있다. 그러나 그 혜택이 원주민보다 외부 투자자에게 집중될 때, 재개발은 '젠트리피케이션'의 다른 이름이 된다.</p>
-<h3>세입자 보호의 현실</h3>
-<p>현행 법률상 세입자는 이주비와 임시 거주지를 지원받을 수 있지만, 현실에서는 충분하지 않은 경우가 많다. 아현동 주민 상당수는 인근 지역에서조차 새 거처를 구하기 어렵다고 호소한다.</p>
-<h3>대안은 없는가</h3>
-<p>원주민이 재개발 후 돌아올 수 있도록 임대주택 비율을 높이고, 소규모 정비사업을 통해 전면 철거 방식의 재개발을 지양하는 접근이 필요하다. 주민 참여형 재개발 모델이 그 해답이 될 수 있다.</p>
-
-    </div>
+<div class="article-wrapper">
+  <div style="max-width:800px;margin:24px auto 0;padding:0 16px;">
+    <a href="../local.html" class="back-link">← 지역로 돌아가기</a>
   </div>
+
+  <article class="article-main">
+    <header class="article-header">
+      <p class="article-category">지역</p>
+      <h1 class="article-title">아현동 재개발, 원주민은 돌아올 수 있는가</h1>
+      <p class="article-summary">(요약 없음)</p>
+      <div class="article-meta">✍️ 편집부 | 📅 2026.04.12</div>
+    </header>
+
+    <section class="article-content">
+      <p>마포구 아현동 일대 재개발 사업이 본격화되면서 세입자와 원주민 이주 문제가 수면 위로 떠올랐다. 수십 년간 이 지역에서 살아온 주민들이 개발 이익에서 소외된 채 떠나야 하는 현실이 반복되고 있다.</p>
+      <p>재개발은 노후 주거환경을 개선하고 지역 가치를 높이는 긍정적 측면이 있다. 그러나 그 혜택이 원주민보다 외부 투자자에게 집중될 때, 재개발은 '젠트리피케이션'의 다른 이름이 된다.</p>
+      <p>현행 법률상 세입자는 이주비와 임시 거주지를 지원받을 수 있지만, 현실에서는 충분하지 않은 경우가 많다. 아현동 주민 상당수는 인근 지역에서조차 새 거처를 구하기 어렵다고 호소한다.</p>
+      <p>원주민이 재개발 후 돌아올 수 있도록 임대주택 비율을 높이고, 소규모 정비사업을 통해 전면 철거 방식의 재개발을 지양하는 접근이 필요하다. 주민 참여형 재개발 모델이 그 해답이 될 수 있다.</p>
+
+    </section>
+  </article>
 </div>
 
-<footer style="background:#111;color:#999;padding:32px 20px;text-align:center;font-size:12px;">
-  <div style="font-size:22px;font-weight:900;color:#fff;letter-spacing:6px;font-family:Georgia,serif;margin-bottom:12px;">KATH<span style="color:#c6141e">A</span>ROS</div>
-  <div style="border-top:1px solid #333;padding-top:16px;line-height:2;">
-    <p><strong style="color:#fff">카타로스 인터넷신문</strong> | 발행인 겸 편집인: <span style="color:#fff">김재록</span></p>
-    <p>서울특별시 마포구</p>
-    <p>인터넷신문등록번호: <span style="color:#c6141e">서울, 아53972</span></p>
-    <p style="margin-top:8px;">© 2026 KATHAROS. All Rights Reserved.</p>
+<footer class="footer">
+  <div class="footer-content">
+    <div>차진단, 정론, 무를 빼고 진실만서 전합니다.</div>
+    <hr>
+    <div style="font-size:11px;color:#999;">
+      (주)카타로스 인터넷신문 · 등록증 서울 아53972· 발행인 김재록 · 편집인 김영은 · 발행소 서울남 마포구 도화동<br>
+      Copyright (c) 2026 KATHAROS. All rights reserved.
+    </div>
   </div>
 </footer>
-<script>document.getElementById('today-date').textContent = new Date().toLocaleDateString('ko-KR', {year:'numeric',month:'long',day:'numeric',weekday:'long'});</script>
+
 </body>
 </html>
