@@ -1,0 +1,5 @@
+# Runtime files created by the safe article JSON pipeline
+latest-article.draft
+latest-articles.json.bak
+latest-articles.json.lock
+latest-articles.json.pre-pipeline.bak
